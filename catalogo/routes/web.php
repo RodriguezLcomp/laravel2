@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MarcaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// use App\Http\Controllers\MarcaController;
+//No funcion el use App
+
+####### CRUD de marcas
+Route::get('/adminMarcas', [ MarcaController::class, 'index' ] );
